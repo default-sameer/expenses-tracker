@@ -4,8 +4,11 @@ import { expensesRoute } from "./routes/expenses";
 const app = new Hono().basePath("/api");
 
 app.get("/", (c) => {
-  return c.json("Hello Hono!");
+  return c.json({
+    message: "Hello From the Dark Side",
+  });
 });
 
-app.route("/expenses", expensesRoute);
+const apiRoutes = app.route("/expenses", expensesRoute);
 export default app;
+export type ApiRoutes = typeof apiRoutes;

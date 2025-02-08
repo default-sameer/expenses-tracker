@@ -2,7 +2,10 @@
   "name": "expenses-tracker",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "bun run --cwd client build && cp -r client/out/* public/ && wrangler deploy --minify"
+    "deploy": "wrangler deploy --minify",
+    "build": "npm run build:client && npm run export:client",
+    "build:client": "your-build-command-here",
+    "export:client": "your-export-command-here --output /public"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.4.2",
