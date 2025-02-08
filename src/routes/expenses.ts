@@ -21,6 +21,13 @@ export const expensesRoute = new Hono()
     c.status(201);
     return c.json({ expenses });
   })
+  .get("/total", (c) => {
+    const total = mockexpenses.reduce(
+      (acc, expense) => acc + expense.amount,
+      0
+    );
+    return c.json({ total });
+  })
   .get("/:id", (c) => {
     const id = c.req.param("id");
     const expenses = mockexpenses.find((expense) => expense.id === id);
