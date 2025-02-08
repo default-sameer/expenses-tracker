@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://exp.sameer-joshi.com.np/:path*", // Proxy to Backend
+        destination: "https://exp.sameer-joshi.com.np/api/:path*", // Proxy to Backend
       },
     ];
   },
