@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "expenses-tracker",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-08"
+
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
+}
